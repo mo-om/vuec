@@ -14,34 +14,34 @@
 
 ### 检查
 
->fx-vue -v or fx-vue -h
+>vuec -v or vuec -h
 
 <br/>
 
 ### 使用
 
->fx-vue myapp && cd myapp/src
+>vuec myapp && cd myapp/src
 
 
 | 类型       | 示例                                       |   是否注册模块  |
 | :-------- | :------------------------------------------| :-----------: |
-| module    | fx-vue g module views/or/components/name   |       否      |
-| view      | fx-vue g view views/my-view                |       是      |
-| store     | fx-vue g store store/my-store              |       是      |
-| router    | fx-vue g router routers/my-router          |       是      |
-| filter    | fx-vue g filter filters/my-filter          |       是      |
-| component | fx-vue g component components/my-component |       是      |
-| directive | fx-vue g directive directives/my-directive |       是      |
+| module    | vuec g module views/or/components/name   |       否      |
+| view      | vuec g view views/my-view                |       是      |
+| store     | vuec g store store/my-store              |       是      |
+| router    | vuec g router routers/my-router          |       是      |
+| filter    | vuec g filter filters/my-filter          |       是      |
+| component | vuec g component components/my-component |       是      |
+| directive | vuec g directive directives/my-directive |       是      |
 
 <br/>
 
 ### 说明
 
 创建多视图, 在创建multiview时不能同时创建subview
->fx-vue g view views -m view1,view2,view3
+>vuec g view views -m view1,view2,view3
 
 创建子视图, 在创建view时还可以同时创建subview并生成一个对应的router, 但不会为subview生成对应的router
->fx-vue g view views/my-view -s subview1,subview2,subview3
+>vuec g view views/my-view -s subview1,subview2,subview3
 
 关于是否注册模块
 >注册模块表示在对应模块的入口/出口文件index.js中import生成的模块并注册
