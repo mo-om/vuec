@@ -1,0 +1,152 @@
+@popup-before-color: #e9eaec;
+@popup-after-color: #fff;
+@popup-before-size: 9px;
+@popup-after-size: 7px;
+
+.confirm-popup-wrap {
+  position: relative;
+}
+
+// popup init state
+.confirm-popup {
+  position: absolute;
+  background:@popup-after-color;
+  border: 1px solid @popup-before-color;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  padding: 1rem;
+  display: none;
+  border-radius: 4px;
+  color: #495060;
+}
+
+// popup shown state
+.confirm-popup.shown {
+  display: block;
+}
+
+
+// popup translate-x centered
+.confirm-popup.top,
+.confirm-popup.bottom {
+  .translate-x-center();
+  &:after,
+  &:before {
+    .translate-x-center();
+  }
+}
+
+// popup translate-y centered
+.confirm-popup.left,
+.confirm-popup.right {
+  .translate-y-center();
+  &:after,
+  &:before {
+    .translate-y-center();
+  }
+}
+
+// position for (top|rigth|bottom|left) popup
+// and offset the 1rem padding-box for .button > span
+.confirm-popup.top {
+  bottom: 100%;
+  margin-bottom: @popup-before-size;
+}
+
+.confirm-popup.bottom {
+  top: 100%;
+  margin-top: @popup-before-size;
+}
+
+.confirm-popup.left {
+  right: 100%;
+  margin-right: @popup-before-size;
+}
+
+.confirm-popup.right {
+  left: 100%;
+  margin-left: @popup-before-size;
+}
+
+.confirm-popup.fixed {
+  position: fixed;
+}
+
+.confirm-popup .popup-title {
+  margin-bottom: .5rem;
+}
+
+// common style for :before && :after selector
+.confirm-popup:before,
+.confirm-popup:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+// diff style for :before && :after selector
+.confirm-popup:before {
+  border-width: @popup-before-size;
+}
+.confirm-popup:after {
+  border-width: @popup-after-size;
+}
+
+// arrow for popup.top
+.confirm-popup.top:before,
+.confirm-popup.top:after {
+  border-bottom-width: 0;
+}
+.confirm-popup.top:before {
+  bottom: -@popup-before-size;
+  border-top-color: @popup-before-color;
+}
+.confirm-popup.top:after {
+  bottom: -@popup-after-size;
+  border-top-color: @popup-after-color;
+}
+
+// arrow for popup.right
+.confirm-popup.right:before,
+.confirm-popup.right:after {
+  border-left-width: 0;
+}
+.confirm-popup.right:before {
+  left: -@popup-before-size;
+  border-right-color: @popup-before-color;
+}
+.confirm-popup.right:after {
+  left: -@popup-after-size;
+  border-right-color: @popup-after-color;
+}
+
+// arrow for popup.bottom
+.confirm-popup.bottom:before,
+.confirm-popup.bottom:after {
+  border-top-width: 0;
+}
+.confirm-popup.bottom:before {
+  top: -@popup-before-size;
+  border-bottom-color: @popup-before-color;
+}
+.confirm-popup.bottom:after {
+  top: -@popup-after-size;
+  border-bottom-color: @popup-after-color;
+}
+
+// arrow for popup.left
+.confirm-popup.left:before,
+.confirm-popup.left:after {
+  border-right-width: 0;
+}
+.confirm-popup.left:before {
+  right: -@popup-before-size;
+  border-left-color: @popup-before-color;
+}
+.confirm-popup.left:after {
+  right: -@popup-after-size;
+  border-left-color: @popup-after-color;
+}

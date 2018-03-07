@@ -1,0 +1,24 @@
+.app-view {
+  padding: 2rem 2rem;
+  > * {
+  	transition: all .35s
+  }
+}
+
+.app-view {
+	.app-sidebar {
+		transform: translateX(-100%)
+	}
+	.app-content {
+		margin-left: 0;
+	}
+}
+
+.app-view.sidebar-opened {
+	.app-sidebar {
+		transform: translateX(0%)
+	}
+	.app-content {
+		margin-left: @app-sidebar-width;
+	}
+}

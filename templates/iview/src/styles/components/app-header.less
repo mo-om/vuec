@@ -1,0 +1,72 @@
+.app-header {
+  display: flex;
+  background: @primary-color;
+  box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1), 0 0 0 1px rgba(17, 17, 17, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: @app-header-height;
+  .ivu-menu-horizontal.ivu-menu-light:after {
+    background: none;
+  }
+  .user-menu .ivu-menu-submenu {
+    float: right;
+  }
+}
+
+.app-brand {
+  display: block;
+  width: @app-sidebar-width;
+  color: #fff;
+  line-height: 30px;
+  font-size: 1.2rem;
+  padding: 7px 2rem 0 1rem;
+  > .app-logo {
+    width: 30px;
+    background: #fff;
+    padding: 2px;
+    margin-right: .25rem;
+  }
+  > .app-logo, .app-name {
+    vertical-align: middle;
+  }
+  &:hover {
+    color: #fff;
+    text-shadow: 0 0 1rem rgba(255,255,255,.5);
+  }
+}
+
+.app-header-info {
+  flex: 1
+}
+
+.app-expand-ctrl {
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  /*.ctrl-handle {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }*/
+  &:hover {
+    background: @active-color;
+  }
+
+}
+
+.app-menu {
+  
+}
+
+.app-menu-right {
+
+}
+
+.nofooter .ivu-modal-footer{
+  border-top: none;
+  padding: 0
+}

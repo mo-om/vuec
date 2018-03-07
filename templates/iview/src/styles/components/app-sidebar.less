@@ -1,0 +1,17 @@
+.app-sidebar {
+  width: @app-sidebar-width;
+  top: @app-header-height;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background: @app-section-background;
+  padding: 1rem 0;
+  box-shadow: @app-box-shadow-vertical;
+  overflow-y: auto;
+  .ivu-menu-vertical.ivu-menu-light:after {
+    background-color: transparent;
+  }
+  .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    background-color: @app-light-active-color;
+  }
+}

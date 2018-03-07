@@ -1,0 +1,41 @@
+{
+  "name": "vuec",
+  "version": "1.0.0",
+  "description": "a scaffold which building vue app",
+  "bin": {
+    "vuec": "./bin/vue-cli.js"
+  },
+  "main": "bin/vue-cli.js",
+  "scripts": {
+    "postversion": "git push --follow-tags",
+    "lint": "eslint --fix --ext .js bin .js modules .js,.vue templates/iview/src .js,.vue templates/files",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "iview",
+    "vue",
+    "cli",
+    "scaffold",
+    "framework"
+  ],
+  "author": "chengwei915@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "cors": "^2.8.4",
+    "detect-port": "^1.2.2",
+    "fs-extra": "^4.0.2",
+    "lodash": "^4.17.4",
+    "sorted-object": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.15.0",
+    "eslint-plugin-vue": "^4.2.0",
+    "rimraf": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mo-om/vuec.git"
+  }
+}

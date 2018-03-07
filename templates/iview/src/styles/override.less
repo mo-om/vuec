@@ -1,0 +1,27 @@
+// if you can override by less variable in theme.less, do not here
+.breadcrumb {
+  margin-bottom: 1rem;
+}
+.ivu-menu-vertical {
+  width: auto!important;
+  .ivu-menu-item {
+    white-space: nowrap;
+  }
+}
+.ivu-menu-horizontal {
+  height: @app-header-height;
+  line-height: @app-header-height;
+}
+.ivu-menu-primary.ivu-menu-horizontal .ivu-menu-item-active,
+.ivu-menu-primary.ivu-menu-horizontal .ivu-menu-submenu-active,
+.ivu-menu-primary.ivu-menu-horizontal .ivu-menu-item:hover,
+.ivu-menu-primary.ivu-menu-horizontal .ivu-menu-submenu:hover {
+  background: @active-color;
+}
+.ivu-menu-item a {
+  color: inherit;
+  display: block;
+}
+.ivu-table-wrapper {
+  margin-bottom: 2rem;
+}
